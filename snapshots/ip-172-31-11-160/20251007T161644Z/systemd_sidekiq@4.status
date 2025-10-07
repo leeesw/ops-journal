@@ -1,0 +1,20 @@
+● sidekiq-flagship@4.service - Sidekiq (flagship) instance 4
+     Loaded: loaded (/etc/systemd/system/sidekiq-flagship@.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2025-10-07 15:42:54 UTC; 33min ago
+   Main PID: 2434072 (bundle)
+      Tasks: 10 (limit: 37584)
+     Memory: 109.9M (peak: 110.9M)
+        CPU: 3.846s
+     CGroup: /sidekiq.slice/sidekiq-flagship.slice/sidekiq-flagship@4.service
+             └─2434072 "sidekiq 7.3.9 flagship-4 [0 of 5 busy]"
+
+Oct 07 15:42:54 ip-172-31-11-160 systemd[1]: Started sidekiq-flagship@4.service - Sidekiq (flagship) instance 4.
+Oct 07 15:42:54 ip-172-31-11-160 sidekiq-flagship[4][2434072]: [run-sidekiq-flagship] iid=4 rails_env=production queues=default concurrency=5 app_dir=/home/ubuntu/flagship-seoulmake
+Oct 07 15:42:55 ip-172-31-11-160 sidekiq-flagship[4][2434174]: The Gemfile's dependencies are satisfied
+Oct 07 15:42:56 ip-172-31-11-160 sidekiq-flagship[4][2434072]: [DEPRECATION] Rack::Attack.throttled_response is deprecated. Please use Rack::Attack.throttled_responder instead
+Oct 07 15:42:57 ip-172-31-11-160 sidekiq-flagship[4][2434072]: 2025-10-07T15:42:57.426Z pid=2434072 tid=1gay0 INFO: Booted Rails 8.0.2.1 application in production environment
+Oct 07 15:42:57 ip-172-31-11-160 sidekiq-flagship[4][2434072]: 2025-10-07T15:42:57.426Z pid=2434072 tid=1gay0 INFO: Running in ruby 3.4.5 (2025-07-16 revision 20cda200d3) +PRISM [x86_64-linux]
+Oct 07 15:42:57 ip-172-31-11-160 sidekiq-flagship[4][2434072]: 2025-10-07T15:42:57.426Z pid=2434072 tid=1gay0 INFO: See LICENSE and the LGPL-3.0 for licensing details.
+Oct 07 15:42:57 ip-172-31-11-160 sidekiq-flagship[4][2434072]: 2025-10-07T15:42:57.426Z pid=2434072 tid=1gay0 INFO: Upgrade to Sidekiq Pro for more features and support: https://sidekiq.org
+Oct 07 15:42:57 ip-172-31-11-160 sidekiq-flagship[4][2434072]: 2025-10-07T15:42:57.426Z pid=2434072 tid=1gay0 INFO: Sidekiq 7.3.9 connecting to Redis with options {size: 10, pool_name: "internal", url: "redis://127.0.0.1:6380/1"}
+Oct 07 15:42:57 ip-172-31-11-160 sidekiq-flagship[4][2434072]: 2025-10-07T15:42:57.428Z pid=2434072 tid=1gay0 INFO: Sidekiq 7.3.9 connecting to Redis with options {size: 5, pool_name: "default", url: "redis://127.0.0.1:6380/1"}
