@@ -1,34 +1,34 @@
-# Sidekiq (flagship) runtime map — ip-172-31-11-160 — 20251007T162350Z
+# Sidekiq (flagship) runtime map — ip-172-31-11-160 — 20251007T171624Z
 
-**Snapshot:** `snapshots/ip-172-31-11-160/20251007T162350Z`
+**Snapshot:** `snapshots/ip-172-31-11-160/20251007T171624Z`
 
 
 ## Instance env overlays (safe keys)
 
 ### @1.env
 ```env
-QUEUES=default
+QUEUES=llm_seo,llm_onpage,llm_schema
 CONCURRENCY=10
 TAG=flagship-1
 ```
 
 ### @2.env
 ```env
-QUEUES=default
+QUEUES=images,llm
 CONCURRENCY=5
 TAG=flagship-2
 ```
 
 ### @3.env
 ```env
-QUEUES=default
+QUEUES=llm_score
 CONCURRENCY=5
 TAG=flagship-3
 ```
 
 ### @4.env
 ```env
-QUEUES=default
+QUEUES=ads
 CONCURRENCY=5
 TAG=flagship-4
 ```
