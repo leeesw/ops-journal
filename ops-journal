@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+set -euo pipefail
+CMD=${1:-help}
+HOST=$(hostname -f 2>/dev/null || hostname)
+STAMP=$(date -u +%Y%m%d-%H%M%S)
+ROOT="/home/ubuntu/ops-journal"
+OUT="$ROOT/snapshots/$HOST/$STAMP"
+mkdir -p "$OUT"
+
+OPS_READ_TOKEN=""
+if [ -f /etc/flagship-seoulmake.env ]; then
+  OPS_READ_TOKEN=$(grep -oP '^OPS_READ_TOKEN=\K.*' /etc/flagship-seoulmake.env || true)
+fi
+
+case "$CMD" in
+  snapshot)
+    # systemd / ports
+    systemctl --no-pager --type=service 'flagship-seoulmake.service' 'sidekiq@*.service' 'sidekiq-flagship@*.service' > "$OUT/services.txt" || true
+    ss -ltnp > "$OUT/ports.txt" || true
+
+    # /atr/admin/ops JSON
+    if [ -n "$OPS_READ_TOKEN" ]; then
+      curl -sS -H "X-Ops-Token: $OPS_READ_TOKEN" http://127.0.0.1:3000/atr/admin/ops | jq . > "$OUT/ops.json" || echo '{}' > "$OUT/ops.json"
+    else
+      echo '{}' > "$OUT/ops.json"
+    fi
+
+    cat > "$OUT/README.md" <<EOF
+# Snapshot $HOST at $STAMP (UTC)
+Files:
+- services.txt — systemd summary
+- ports.txt — listening TCP ports
+- ops.json — /atr/admin/ops payload
+EOF
+    echo "[OK] Snapshot -> $OUT"
+    ;;
+  *)
+    echo "Usage: $0 snapshot"
+    ;;
+esac

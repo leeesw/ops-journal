@@ -1,0 +1,99 @@
+{
+  "time": "2025-10-07T12:36:56Z",
+  "sidekiq": {
+    "redis": {
+      "url": "redis://127.0.0.1:6380/1",
+      "error": null
+    },
+    "processes": [
+      {
+        "tag": "flagship-seoulmake",
+        "queues": [
+          "llm_seo",
+          "llm_onpage",
+          "llm_schema",
+          "llm_score",
+          "default"
+        ],
+        "busy": 0,
+        "concurrency": 10
+      },
+      {
+        "tag": "sidekiq-flagship@1",
+        "queues": [
+          "default"
+        ],
+        "busy": 0,
+        "concurrency": 10
+      },
+      {
+        "tag": "sidekiq-flagship@2",
+        "queues": [
+          "default"
+        ],
+        "busy": 0,
+        "concurrency": 5
+      },
+      {
+        "tag": "sidekiq-flagship@3",
+        "queues": [
+          "default"
+        ],
+        "busy": 0,
+        "concurrency": 5
+      },
+      {
+        "tag": "sidekiq-flagship@4",
+        "queues": [
+          "default"
+        ],
+        "busy": 0,
+        "concurrency": 5
+      }
+    ],
+    "queues": {
+      "ads-blue": {
+        "size": 0,
+        "latency_s": 0.0,
+        "avg_ms": null,
+        "throughput_5m": null
+      },
+      "images-blue": {
+        "size": 0,
+        "latency_s": 0.0,
+        "avg_ms": null,
+        "throughput_5m": null
+      },
+      "llm": {
+        "size": 0,
+        "latency_s": 0.0,
+        "avg_ms": null,
+        "throughput_5m": null
+      },
+      "llm-blue": {
+        "size": 0,
+        "latency_s": 0.0,
+        "avg_ms": null,
+        "throughput_5m": null
+      },
+      "llm_score": {
+        "size": 0,
+        "latency_s": 0.0,
+        "avg_ms": null,
+        "throughput_5m": null
+      },
+      "llm_seo": {
+        "size": 0,
+        "latency_s": 0.0,
+        "avg_ms": null,
+        "throughput_5m": null
+      },
+      "score-blue": {
+        "size": 0,
+        "latency_s": 0.0,
+        "avg_ms": null,
+        "throughput_5m": null
+      }
+    }
+  }
+}
