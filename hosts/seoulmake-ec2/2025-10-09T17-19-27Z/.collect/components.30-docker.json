@@ -1,0 +1,82 @@
+{
+  "containers": [
+    {
+      "image": "flagship:bluefix-202510090555",
+      "name": "flagship-blue-sidekiq-admatch-1",
+      "ports": 0,
+      "status": "Restarting (1) 40 seconds ago"
+    },
+    {
+      "image": "flagship:bluefix-202510090555",
+      "name": "flagship-blue-sidekiq-llm-1",
+      "ports": 0,
+      "status": "Restarting (1) 55 seconds ago"
+    },
+    {
+      "image": "flagship:bluefix-202510090555",
+      "name": "flagship-blue-sidekiq-cpu-1",
+      "ports": 0,
+      "status": "Restarting (1) 4 seconds ago"
+    },
+    {
+      "image": "flagship:bluefix-202510090555",
+      "name": "flagship-blue-sidekiq-io-1",
+      "ports": 0,
+      "status": "Restarting (1) 4 seconds ago"
+    },
+    {
+      "image": "flagship:bluefix-202510090555",
+      "name": "flagship-blue-app-1",
+      "ports": 0,
+      "status": "Restarting (1) 2 seconds ago"
+    },
+    {
+      "image": "flagship:bluefix-202510090511",
+      "name": "flagship-blue-sidekiq-analytics-1",
+      "ports": 0,
+      "status": "Restarting (1) 51 seconds ago"
+    },
+    {
+      "image": "flagship:bluefix-202510090511",
+      "name": "flagship-blue-sidekiq-scheduler-1",
+      "ports": 0,
+      "status": "Restarting (1) 39 seconds ago"
+    },
+    {
+      "image": "flagship:bluefix-202510090511",
+      "name": "flagship-blue-sidekiq-indexing-1",
+      "ports": 0,
+      "status": "Restarting (1) 56 seconds ago"
+    },
+    {
+      "image": "nginx:1.29",
+      "name": "seoulmake_nginx",
+      "ports": 4,
+      "status": "Up 39 hours"
+    },
+    {
+      "image": "redis:7-alpine",
+      "name": "dev_redis_workers",
+      "ports": 1,
+      "status": "Up 10 days"
+    },
+    {
+      "image": "wordpress:latest",
+      "name": "seoulmake_wordpress",
+      "ports": 1,
+      "status": "Up 13 days (healthy)"
+    },
+    {
+      "image": "ccd5919ba844",
+      "name": "seoulmake_sidecar",
+      "ports": 0,
+      "status": "Up 13 days"
+    },
+    {
+      "image": "redis:7.2-alpine",
+      "name": "seoulmake_redis",
+      "ports": 1,
+      "status": "Up 13 days"
+    }
+  ]
+}

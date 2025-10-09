@@ -36,3 +36,37 @@ sample:
 	rm -rf "$$SAMPLE" && mkdir -p "$$SAMPLE" && \
 	scripts/snapshot-lite.sh "seoulmake-ec2" "$$SAMPLE" "$(LITE_BUDGET)" >/dev/null 2>&1 || true && \
 	echo "[sample] refreshed $$SAMPLE"
+
+.PHONY: view publish publish-snapshot
+
+view:
+	@OUT="$${OUTDIR:-$$(ls -d hosts/*/* 2>/dev/null | tail -n1)}"; \
+	test -n "$$OUT" || { echo "no snapshot under hosts/*/*; run 'make snapshot-lite' first"; exit 1; }; \
+	tools/ai-snapshot-view.sh "$$OUT"
+
+# 변경사항을 커밋하고 현재 브랜치로 push (메시지는 MSG= 로 오버라이드 가능)
+publish:
+	@set -e; \
+	git rev-parse --is-inside-work-tree >/dev/null; \
+	BR="$$(git rev-parse --abbrev-ref HEAD)"; \
+	if git diff --quiet && git diff --cached --quiet; then \
+	  echo "[publish] no changes to commit"; exit 0; \
+	fi; \
+	MSG="$${MSG:-chore: ops-journal autopush ($$(date -u +'%Y-%m-%dT%H:%M:%SZ'))}"; \
+	git add -A; \
+	git commit -m "$$MSG" || true; \
+	git push -u origin "$$BR"; \
+	echo "[publish] pushed $$BR"
+
+# 스냅샷 생성+검증 후 방금 산출물만 commit & push
+publish-snapshot:
+	@set -e; \
+	make snapshot-lite verify; \
+	OUT="$$(ls -d hosts/*/* 2>/dev/null | tail -n1)"; \
+	test -n "$$OUT"; \
+	BR="$$(git rev-parse --abbrev-ref HEAD)"; \
+	MSG="$${MSG:-chore: add LITE snapshot $$OUT}"; \
+	git add "$$OUT/manifest.json" "$$OUT/components.json" "$$OUT/graph.ndjson" "$$OUT/runbooks/rollback.snapshot.json"; \
+	git commit -m "$$MSG" || { echo "[publish-snapshot] nothing to commit"; exit 0; }; \
+	git push -u origin "$$BR"; \
+	echo "[publish-snapshot] pushed $$BR: $$OUT"

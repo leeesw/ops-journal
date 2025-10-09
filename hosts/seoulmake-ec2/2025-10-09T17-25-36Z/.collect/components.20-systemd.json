@@ -1,0 +1,17 @@
+{
+  "systemd": [
+    {
+      "failed": 9,
+      "running": 32,
+      "summary": true
+    },
+    {
+      "n_restarts": 19939,
+      "unit": "puma-flagship.service"
+    },
+    {
+      "n_restarts": 8770,
+      "unit": "flagship-seoulmake.service"
+    }
+  ]
+}
