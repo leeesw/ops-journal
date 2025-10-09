@@ -1,0 +1,14 @@
+{
+  "collectors": [
+    "collectors.d/*"
+  ],
+  "evidence_uri": [],
+  "host": "seoulmake-ec2",
+  "local_tz": "UTC",
+  "size_guard": {
+    "bytes_total": 5474,
+    "lite_budget_bytes": 307200
+  },
+  "timestamp_utc": "2025-10-09T16-42-25Z",
+  "version": "v1.2-lite"
+}
