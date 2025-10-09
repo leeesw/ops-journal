@@ -9,3 +9,6 @@ site/
 *.pyc
 __pycache__/
 .DS_Store
+
+# local backups
+Makefile.bak.*
