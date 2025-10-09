@@ -3,14 +3,15 @@
     "(external evidence)"
   ],
   "evidence_uri": [
-    "https://evidence.example.local/ops/"
+    "file:///var/log/syslog",
+    "file:///var/log/dpkg.log"
   ],
   "host": "seoulmake-ec2",
   "local_tz": "UTC",
   "size_guard": {
-    "bytes_total": 590,
+    "bytes_total": 609,
     "lite_budget_bytes": 307200
   },
-  "timestamp_utc": "2025-10-09T18-27-49Z",
+  "timestamp_utc": "2025-10-09T17-50-01Z",
   "version": "v1.2-full"
 }
