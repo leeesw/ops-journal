@@ -1,0 +1,8 @@
+{
+  "name": "rollback.snapshot",
+  "steps": [
+    "git revert -m 1 <merge_commit_sha>",
+    "or: git checkout -B main <pin_sha> && git push -f origin main",
+    "verify CI green, check size gate"
+  ]
+}
