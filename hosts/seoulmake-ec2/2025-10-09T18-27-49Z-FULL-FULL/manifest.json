@@ -1,0 +1,16 @@
+{
+  "collectors": [
+    "(external evidence)"
+  ],
+  "evidence_uri": [
+    "https://evidence.example.local/ops/"
+  ],
+  "host": "seoulmake-ec2",
+  "local_tz": "UTC",
+  "size_guard": {
+    "bytes_total": 590,
+    "lite_budget_bytes": 307200
+  },
+  "timestamp_utc": "2025-10-09T18-27-49Z",
+  "version": "v1.2-full"
+}
