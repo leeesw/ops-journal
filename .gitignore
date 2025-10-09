@@ -1,0 +1,11 @@
+site/
+.venv/
+*.pyc
+__pycache__/
+.DS_Store
+snapshots/
+site/
+.venv/
+*.pyc
+__pycache__/
+.DS_Store

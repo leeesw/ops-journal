@@ -1,8 +1,0 @@
-● sidekiq-flagship@4.service - Sidekiq (flagship) instance 4
-     Loaded: loaded (/etc/systemd/system/sidekiq-flagship@.service; enabled; preset: enabled)
-    Drop-In: /etc/systemd/system/sidekiq-flagship@.service.d
-             └─env.conf
-     Active: activating (auto-restart) (Result: exit-code) since Wed 2025-10-08 02:46:55 UTC; 1s ago
-    Process: 2536966 ExecStart=/usr/local/bin/run-sidekiq-flagship.sh 4 (code=exited, status=1/FAILURE)
-   Main PID: 2536966 (code=exited, status=1/FAILURE)
-        CPU: 1.960s

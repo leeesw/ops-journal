@@ -1,6 +1,0 @@
-OPS_JOURNAL_DIR=/home/ubuntu/ops-journal
-BRANCH=main
-COMMIT=4f7551047596
-Remotes:
-origin	git@github.com:leeesw/ops-journal.git (fetch)
-origin	git@github.com:leeesw/ops-journal.git (push)

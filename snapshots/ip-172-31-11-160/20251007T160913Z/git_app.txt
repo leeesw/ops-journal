@@ -1,8 +1,0 @@
-APP_DIR=/home/ubuntu/flagship-seoulmake
-BRANCH=main
-COMMIT=01588fe25d1c
-DIRTY=37
-
-Remotes:
-origin	git@github.com-status:leeesw/flagship-seoulmake.git (fetch)
-origin	git@github.com-status:leeesw/flagship-seoulmake.git (push)
