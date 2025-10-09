@@ -89,3 +89,27 @@ publish-full:
 	git commit -m "$$MSG" || { echo "[publish-full] nothing to commit"; exit 0; }; \
 	git push -u origin "$$BR"; \
 	echo "[publish-full] pushed $$BR: $$OUT"
+
+.PHONY: prune-old publish-prune-old
+# 예) make prune-old                # HOST=$(HOST), N=30, TYPE=full
+#     make prune-old HOST=seoulmake-ec2 N=50 TYPE=all DRY=1
+prune-old:
+	@HOST="${HOST}"; \
+	N="${N:-30}"; \
+	TYPE="${TYPE:-full}"; \
+	DRY="${DRY:-0}"; \
+	echo "[make prune-old] HOST=$$HOST N=$$N TYPE=$$TYPE DRY=$$DRY"; \
+	DRY="$$DRY" tools/prune-old.sh "$$HOST" "$$N" "$$TYPE"
+
+publish-prune-old:
+	@set -e; \
+	make prune-old N="${N:-30}" TYPE="${TYPE:-full}" ; \
+	if git diff --quiet && git diff --cached --quiet; then \
+	  echo "[publish-prune-old] no changes"; exit 0; \
+	fi; \
+	BR="$$(git rev-parse --abbrev-ref HEAD)"; \
+	MSG="$${MSG:-chore: prune old snapshots (HOST=$${HOST:-*} TYPE=$${TYPE:-full} keep=$${N:-30})}"; \
+	git add -A; \
+	git commit -m "$$MSG" || true; \
+	git push -u origin "$$BR"; \
+	echo "[publish-prune-old] pushed $$BR"
