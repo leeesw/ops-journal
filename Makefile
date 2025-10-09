@@ -74,7 +74,7 @@ publish-snapshot:
 .PHONY: snapshot-full publish-full
 
 snapshot-full:
-	@scripts/snapshot-full.sh "$(HOST)" "$(OUTDIR)"
+	@scripts/snapshot-full.sh "$(HOST)" "$(OUTDIR)-FULL"
 
 # FULL 산출물만 커밋/푸시 (evidence_uri만 기록)
 publish-full:
