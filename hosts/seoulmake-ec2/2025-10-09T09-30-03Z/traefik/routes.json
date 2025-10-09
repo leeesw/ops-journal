@@ -1,0 +1,4 @@
+[
+  {"service":"app-blue","weight":100,"middlewares":["gzip"],"health":"unknown"},
+  {"service":"app-green","weight":0,"middlewares":["gzip"],"health":"unknown"}
+]

@@ -1,0 +1,4 @@
+[
+  {"name":"sidekiq-io","concurrency":10,"labels":["io"],"env":{"RAILS_ENV":"production","REDIS_URL":"***"}},
+  {"name":"sidekiq-cpu","concurrency":4,"labels":["cpu"],"env":{"RAILS_ENV":"production","REDIS_URL":"***"}}
+]

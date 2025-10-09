@@ -1,0 +1,3 @@
+{"src":"web","dst":"traefik","kind":"depends_on"}
+{"src":"web","dst":"wp-mariadb","kind":"reads_from"}
+{"src":"jobs","dst":"redis","kind":"talks_to"}

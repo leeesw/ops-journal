@@ -1,0 +1,7 @@
+{"from":"Rails","to":"Sidekiq-io","type":"publishes","label":"enqueue"}
+{"from":"Rails","to":"Traefik","type":"publishes","label":"http"}
+{"from":"Rails","to":"RDS","type":"depends_on"}
+{"from":"Rails","to":"Redis","type":"depends_on"}
+{"from":"Sidekiq-io","to":"Redis","type":"depends_on"}
+{"from":"Traefik","to":"Rails","type":"calls","label":"proxy"}
+{"from":"Rails","to":"S3","type":"publishes","label":"artifact"}

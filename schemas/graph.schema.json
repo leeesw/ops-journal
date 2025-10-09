@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "graph.schema.json",
+  "type": "object",
+  "required": ["src","dst","kind"],
+  "properties": {
+    "src": {"type": "string", "minLength": 1},
+    "dst": {"type": "string", "minLength": 1},
+    "kind": {"type": "string", "enum": ["depends_on","talks_to","reads_from","writes_to","exposes"]}
+  },
+  "additionalProperties": false
+}

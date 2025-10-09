@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "components.schema.json",
+  "type": "object",
+  "properties": {
+    "services": {"type": "array", "items": {"type": "object"}},
+    "containers": {"type": "array", "items": {"type": "object"}},
+    "systemd": {"type": "array", "items": {"type": "object"}},
+    "workers": {"type": "array", "items": {"type": "object"}}
+  },
+  "additionalProperties": false
+}

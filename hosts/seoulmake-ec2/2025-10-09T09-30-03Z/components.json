@@ -1,0 +1,9 @@
+[
+  {"component_id":"Rails","kind":"app","version":"unknown","health":"unknown","depends_on":["Sidekiq-io","Traefik","RDS","Redis","S3"]},
+  {"component_id":"Sidekiq-io","kind":"worker","version":"unknown","health":"unknown","depends_on":["Redis"]},
+  {"component_id":"Sidekiq-cpu","kind":"worker","version":"unknown","health":"unknown","depends_on":["Redis"]},
+  {"component_id":"Traefik","kind":"edge","version":"unknown","health":"unknown"},
+  {"component_id":"RDS","kind":"database","version":"unknown","health":"unknown"},
+  {"component_id":"Redis","kind":"cache","version":"unknown","health":"unknown"},
+  {"component_id":"S3","kind":"object-store","version":"unknown","health":"unknown"}
+]

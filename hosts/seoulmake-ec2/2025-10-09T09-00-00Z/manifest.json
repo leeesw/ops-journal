@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "host_id": "seoulmake-ec2",
+  "captured_at": "2025-10-09T09:00:00Z",
+  "profile": "LITE",
+  "summary": {
+    "key_changes": [],
+    "warnings": []
+  },
+  "item_counts": {
+    "sidekiq.queues": 3,
+    "sidekiq.processes": 2,
+    "components": 7
+  },
+  "artifacts": []
+}

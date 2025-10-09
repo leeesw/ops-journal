@@ -1,0 +1,10 @@
+{
+  "playbook_id":"deploy-rails",
+  "title":"Blue/Green Deploy",
+  "version":"1.0.0",
+  "steps":[
+    {"id":"check-health","action":"http","run":"GET https://example/health","timeout_s":10,"retry":1,"expect":{"rc":0}},
+    {"id":"switch-weight","action":"exec","run":"traefikctl set-weight app-blue 100; traefikctl set-weight app-green 0","timeout_s":10},
+    {"id":"verify","action":"http","run":"GET https://example/_ping","timeout_s":10,"retry":2,"expect":{"rc":0}}
+  ]
+}

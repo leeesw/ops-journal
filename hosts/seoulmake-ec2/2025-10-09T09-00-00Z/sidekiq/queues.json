@@ -1,0 +1,5 @@
+[
+  {"queue":"default","size":0,"latency_s":0},
+  {"queue":"io","size":0,"latency_s":0},
+  {"queue":"cpu","size":0,"latency_s":0}
+]
