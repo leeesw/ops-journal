@@ -1,5 +1,7 @@
 SHELL := /bin/bash
 HOST ?= seoulmake-ec2
+N ?= 30
+TYPE ?= full
 STAMP := $(shell date -u +"%Y-%m-%dT%H-%M-%SZ")
 OUTDIR ?= hosts/$(HOST)/$(STAMP)
 LITE_BUDGET := 307200 # 300KB
