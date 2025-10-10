@@ -1,0 +1,17 @@
+{
+  "collectors": [
+    "(external evidence)"
+  ],
+  "evidence_uri": [
+    "https://evidence.example.local/ops/syslog",
+    "https://evidence.example.local/ops/dpkg.log"
+  ],
+  "host": "seoulmake-ec2",
+  "local_tz": "UTC",
+  "size_guard": {
+    "bytes_total": 647,
+    "lite_budget_bytes": 307200
+  },
+  "timestamp_utc": "2025-10-10T18-12-15Z",
+  "version": "v1.2-full"
+}
