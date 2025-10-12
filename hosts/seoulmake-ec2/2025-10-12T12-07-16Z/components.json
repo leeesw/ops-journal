@@ -1,0 +1,137 @@
+{
+  "containers": [
+    {
+      "image": "c0e531595f6c",
+      "name": "sidekiq_blue",
+      "ports": 1,
+      "status": "Up 26 hours (healthy)"
+    },
+    {
+      "image": "ccd5919ba844",
+      "name": "seoulmake_sidecar",
+      "ports": 0,
+      "status": "Up 2 weeks"
+    },
+    {
+      "image": "flagship:bluefix-202510090511",
+      "name": "flagship-blue-sidekiq-analytics-1",
+      "ports": 0,
+      "status": "Restarting (1) 23 seconds ago"
+    },
+    {
+      "image": "flagship:bluefix-202510090511",
+      "name": "flagship-blue-sidekiq-indexing-1",
+      "ports": 1,
+      "status": "Up Less than a second"
+    },
+    {
+      "image": "flagship:bluefix-202510090511",
+      "name": "flagship-blue-sidekiq-scheduler-1",
+      "ports": 0,
+      "status": "Restarting (1) 28 seconds ago"
+    },
+    {
+      "image": "flagship:bluefix-202510090555",
+      "name": "flagship-blue-app-1",
+      "ports": 0,
+      "status": "Restarting (1) 15 seconds ago"
+    },
+    {
+      "image": "flagship:bluefix-202510090555",
+      "name": "flagship-blue-sidekiq-admatch-1",
+      "ports": 0,
+      "status": "Restarting (1) 32 seconds ago"
+    },
+    {
+      "image": "flagship:bluefix-202510090555",
+      "name": "flagship-blue-sidekiq-cpu-1",
+      "ports": 0,
+      "status": "Restarting (1) 15 seconds ago"
+    },
+    {
+      "image": "flagship:bluefix-202510090555",
+      "name": "flagship-blue-sidekiq-io-1",
+      "ports": 0,
+      "status": "Restarting (1) 15 seconds ago"
+    },
+    {
+      "image": "flagship:bluefix-202510090555",
+      "name": "flagship-blue-sidekiq-llm-1",
+      "ports": 0,
+      "status": "Restarting (1) 24 seconds ago"
+    },
+    {
+      "image": "flagship_seoulmake:latest",
+      "name": "flagship-seoulmake-sidekiq_green-1",
+      "ports": 1,
+      "status": "Up 4 hours (healthy)"
+    },
+    {
+      "image": "flagship_seoulmake:latest",
+      "name": "rails_blue",
+      "ports": 1,
+      "status": "Up 25 hours (healthy)"
+    },
+    {
+      "image": "flagship_seoulmake:latest",
+      "name": "rails_green",
+      "ports": 1,
+      "status": "Up 7 hours (healthy)"
+    },
+    {
+      "image": "haproxy:2.9",
+      "name": "haproxy",
+      "ports": 2,
+      "status": "Up 25 hours"
+    },
+    {
+      "image": "nginx:1.29",
+      "name": "seoulmake_nginx",
+      "ports": 4,
+      "status": "Up 4 days"
+    },
+    {
+      "image": "redis:7-alpine",
+      "name": "dev_redis_workers",
+      "ports": 1,
+      "status": "Up 13 days"
+    },
+    {
+      "image": "redis:7.2-alpine",
+      "name": "seoulmake_redis",
+      "ports": 1,
+      "status": "Up 2 weeks"
+    },
+    {
+      "image": "wordpress:latest",
+      "name": "seoulmake_wordpress",
+      "ports": 1,
+      "status": "Up 2 weeks (healthy)"
+    }
+  ],
+  "services": [
+    {
+      "distro": "Ubuntu 24.04.3 LTS",
+      "host": "seoulmake-ec2",
+      "kernel": "6.14.0-1012-aws",
+      "name": "host",
+      "os": "Linux"
+    }
+  ],
+  "systemd": [
+    {
+      "failed": 9,
+      "running": 33,
+      "summary": true
+    },
+    {
+      "n_restarts": 56385,
+      "unit": "puma-flagship.service"
+    },
+    {
+      "n_restarts": 8770,
+      "unit": "flagship-seoulmake.service"
+    }
+  ],
+  "workers": []
+}
