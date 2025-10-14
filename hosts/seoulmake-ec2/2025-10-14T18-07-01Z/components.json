@@ -1,0 +1,133 @@
+{
+  "containers": [
+    {
+      "image": "c0e531595f6c",
+      "name": "sidekiq_blue",
+      "ports": 1,
+      "status": "Up 31 hours (healthy)"
+    },
+    {
+      "image": "ccd5919ba844",
+      "name": "seoulmake_sidecar",
+      "ports": 0,
+      "status": "Up 31 hours"
+    },
+    {
+      "image": "flagship:bluefix-202510090511",
+      "name": "flagship-blue-sidekiq-analytics-1",
+      "ports": 0,
+      "status": "Restarting (1) 38 seconds ago"
+    },
+    {
+      "image": "flagship:bluefix-202510090511",
+      "name": "flagship-blue-sidekiq-indexing-1",
+      "ports": 0,
+      "status": "Restarting (1) 33 seconds ago"
+    },
+    {
+      "image": "flagship:bluefix-202510090511",
+      "name": "flagship-blue-sidekiq-scheduler-1",
+      "ports": 0,
+      "status": "Restarting (1) 37 seconds ago"
+    },
+    {
+      "image": "flagship:bluefix-202510090555",
+      "name": "flagship-blue-app-1",
+      "ports": 0,
+      "status": "Restarting (1) 40 seconds ago"
+    },
+    {
+      "image": "flagship:bluefix-202510090555",
+      "name": "flagship-blue-sidekiq-admatch-1",
+      "ports": 0,
+      "status": "Restarting (1) 55 seconds ago"
+    },
+    {
+      "image": "flagship:bluefix-202510090555",
+      "name": "flagship-blue-sidekiq-cpu-1",
+      "ports": 0,
+      "status": "Restarting (1) 36 seconds ago"
+    },
+    {
+      "image": "flagship:bluefix-202510090555",
+      "name": "flagship-blue-sidekiq-io-1",
+      "ports": 0,
+      "status": "Restarting (1) 35 seconds ago"
+    },
+    {
+      "image": "flagship:bluefix-202510090555",
+      "name": "flagship-blue-sidekiq-llm-1",
+      "ports": 0,
+      "status": "Restarting (1) 55 seconds ago"
+    },
+    {
+      "image": "flagship_seoulmake:latest",
+      "name": "flagship-seoulmake-sidekiq_green-1",
+      "ports": 0,
+      "status": "Restarting (1) 17 seconds ago"
+    },
+    {
+      "image": "flagship_seoulmake:latest",
+      "name": "rails_blue",
+      "ports": 1,
+      "status": "Up 31 hours (healthy)"
+    },
+    {
+      "image": "flagship_seoulmake:latest",
+      "name": "rails_green",
+      "ports": 1,
+      "status": "Up 31 hours (healthy)"
+    },
+    {
+      "image": "haproxy:2.9",
+      "name": "haproxy",
+      "ports": 2,
+      "status": "Up 31 hours"
+    },
+    {
+      "image": "nginx:1.29",
+      "name": "seoulmake_nginx",
+      "ports": 4,
+      "status": "Up 31 hours"
+    },
+    {
+      "image": "redis:7-alpine",
+      "name": "dev_redis_workers",
+      "ports": 1,
+      "status": "Up 31 hours"
+    },
+    {
+      "image": "redis:7.2-alpine",
+      "name": "seoulmake_redis",
+      "ports": 1,
+      "status": "Up 31 hours"
+    },
+    {
+      "image": "wordpress:latest",
+      "name": "seoulmake_wordpress",
+      "ports": 1,
+      "status": "Up 31 hours (healthy)"
+    }
+  ],
+  "services": [
+    {
+      "distro": "Ubuntu 24.04.3 LTS",
+      "host": "seoulmake-ec2",
+      "kernel": "6.14.0-1014-aws",
+      "name": "host",
+      "os": "Linux"
+    }
+  ],
+  "systemd": [
+    {
+      "failed": 7,
+      "running": 27,
+      "summary": true
+    },
+    {
+      "n_restarts": 31259,
+      "unit": "flagship-seoulmake.service"
+    }
+  ],
+  "workers": []
+}
